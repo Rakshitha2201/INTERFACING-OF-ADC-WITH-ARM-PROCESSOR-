@@ -13,14 +13,26 @@ Coocox IDE
 
 # PROCEDURE:
 Step 1: Go to start All programs  COIDE.
-Step 2: Give a suitable file name for your project and give the destination folder and then next. Step 3: Go to chip NXP LPC 13XX  LPC1343  Next.
+
+Step 2: Give a suitable file name for your project and give the destination folder and then next. 
+
+Step 3: Go to chip NXP LPC 13XX  LPC1343  Next.
+
 Step 4: Select the required library file (SYSCON and GPIO) from the repository. Step 5: A new project will be created.
+
 Step 6: Double click on main.c and type the program.
+
 Step 7: Add the required library source file to the project (Right click on include Add file to group and
 add the source file).
+
 Step 8: Build the program using build option.
-Step 9: Flash the program by clicking on download code to flash. Step 10: Interface the required component and note down the output. ADD FILES:
+
+Step 9: Flash the program by clicking on download code to flash. Step 10: Interface the required component and note down the output. 
+
+ADD FILES:
+
 Repository:
+
 CMSIS core, CMSIS boot, common header files, SYSCON, GPIO.
 
 # Source files:
@@ -33,10 +45,28 @@ simple example.c, Uart Receiver interrupt.c, lcd.c, lcd.h
  
  
 # PROGRAM:
+```
+#include"lcd.h" 
+void ADCExp(); 
+int main(void)
+{
+ReceiverInterrupt(); 
+init_lcd();
+lcd_putstring(LINE1, "RAANA ADC DEMO "); 
+ADCExp();
+while(1)
+{
+}
+}
+```
+
+# OUTPUT
+<img width="938" height="626" alt="image" src="https://github.com/user-attachments/assets/28314435-6ac3-410e-b442-30ce2c4fd5fc" />
 
 
  
 # RESULTS
+Thus, an embedded c program to interface ADC with ARM processor was executed and output was verified successfully.
 
 
 
